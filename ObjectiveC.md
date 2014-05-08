@@ -46,35 +46,35 @@ In this document we describe the basic code conventions to follow when working i
 
 Brakets will be placed always in a new line, alone. Opening brakets and closing brakets will be aligned vertically.
 
-**method** declaration:
+`method` declaration:
 
     - (id)methodWithValue:(int)value
     {
     	// Code here
     }
 
-**if** statement:
+`if` statement:
 
     if (condition)
     {
     	// Code here
     }
     
-**for** statement:
+`for` statement:
 
     for (NSSring *string in array)
     {
     	// Code here
     }
     
-**while** statement:
+`while` statement:
 
     while (condition)
     {
     	// Code here
     }
     
-And the same pattern used on `switch`, `@try @catch`, etc.
+And the same pattern used on `switch`, `@try` and `@catch`, etc.
 
 The only exception is when using Blocks, that the opening braket will be allowed to be placed in the same line as the block signature.
 
