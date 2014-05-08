@@ -26,6 +26,8 @@ In this document we describe the basic code conventions to follow when working i
 
 4. Repository
 
+5. Useful tools
+
 ---
 ##1. Code Basics
 
@@ -107,4 +109,10 @@ The only exception is when using Blocks, that the opening braket will be allowed
 
 ---
 ##4. Repository
+
+---
+##5. Useful tools
+You can use this [XCode plugin](https://github.com/mobilejazz/CodeConventions/blob/master/ObjectiveC.md) to format your code using [Uncrustify](https://github.com/bengardner/uncrustify).
+
+You can use the following [uncrustify config file](https://github.com/mobilejazz/CodeConventions/tree/master/ObjectiveC) to format your files using the Mobilejazz code conventions.
 
