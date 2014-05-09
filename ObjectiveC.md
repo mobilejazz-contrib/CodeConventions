@@ -121,6 +121,28 @@ Objective-C is a verbose language. Variables, methods, constants and any other n
 
 ###2.4 General Recomendations
 
+#### Arrays and Dictionaries
+
+You should **always** use modern Objective-C notation for accessing array and dictonary items.
+
+**For example:**
+```objc
+array[idx] = value;
+value = array[idx];
+
+dictonary[key] = value;
+value = dictonary[key]
+```
+
+**Not:**
+```objc
+[arr setObject:value atIndexedSubscript:idx];
+value = [array objectAtIndex:idx];
+
+[dictonary setValue:value forKey:key];
+value = [dictonary objectForKey:key];
+```
+
 #### Dot-Notation Syntax
 
 Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances.
