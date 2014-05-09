@@ -102,7 +102,7 @@ Objective-C is a verbose language. Variables, methods, constants and any other n
 
 - **Be Verbose**: Names must apport semantic meaning of what the attribute, method, constant, etc. does. Do `myVeryImportantVariableKey` and not `impVarKey`.
 
-- **Variable Names**: Start with a lowercase, without underlines (nor dashes or spaces, of curse), and with an uppercase at first letter of each word. Do `myVariable` and not `myvariable`, `my_variable` or `MyVariable.
+- **Variable Names**: Start with a lowercase, without underlines (nor dashes or spaces, of curse), and with an uppercase at first letter of each word. Do `myVariable` and not `myvariable`, `my_variable` or `MyVariable`.
 
 - **MethodNames**: As Variable Names, start with a lowercase, without underlines and with a capital letter for each first word letter. Arguments might have a prefix as *with*, *from* or *at*. Use common sense to build a readable method name.
 
@@ -121,9 +121,45 @@ Objective-C is a verbose language. Variables, methods, constants and any other n
 
 ###2.4 General Recomendations
 
+#### Dot-Notation Syntax
+
+Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances.
+
+**For example:**
+```objc
+view.backgroundColor = [UIColor orangeColor];
+[UIApplication sharedApplication].delegate;
+```
+
+**Not:**
+```objc
+[view setBackgroundColor:[UIColor orangeColor]];
+UIApplication.sharedApplication.delegate;
+```
+
+#### Singletons
+
+Singleton objects should use a thread-safe pattern for creating their shared instance.
+```objc
++ (instancetype)sharedInstance {
+   static id sharedInstance = nil;
+
+   static dispatch_once_t onceToken;
+   dispatch_once(&onceToken, ^{
+      sharedInstance = [[self alloc] init];
+   });
+
+   return sharedInstance;
+}
+```
+This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
+
 ---
 ##3. Xcode Project
 
+* The project should have 0 warnings.
+* The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped not only by type, but also by feature for greater clarity.
+* Evaluate third-party dependencies before adding them. 
 
 ---
 ##4. Repository
