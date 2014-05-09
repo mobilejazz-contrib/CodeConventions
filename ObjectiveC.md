@@ -3,6 +3,8 @@
 ---
 In this document we describe the basic code conventions to follow when working in a **Objective-C** & **Cocoa** environment. The Mobile Jazz team is encouraged to follow this document in order to conceive and develop similar code.
 
+Mainly, we are going to follow the [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html#//apple_ref/doc/uid/10000146-SW1). However, in this document we are going to describe the main guidelines to follow so you can understand fast what and what not to do.
+
 #Summary
 1. Code Basics
 
@@ -11,6 +13,8 @@ In this document we describe the basic code conventions to follow when working i
 	1.2 Brakets
 	
 	1.3 New Lines
+	
+	1.4 Names
 	
 2. Code Architecture
 
@@ -91,6 +95,18 @@ The only exception is when using Blocks, that the opening braket will be allowed
 - Also, use "brakets" as a spacing tool (each braket is placed in a line without any other characters). It Will help us give some additional space.
 
 - In olders times editors used to wrap lines after 80 characters. In Objective-C we won't ever break a single line for this reason.
+
+###1.4 Names
+
+Objective-C is a verbose language. Variables, methods, constants and any other named word will have an understandeable and readable name.
+
+- **Be Verbose**: Names must apport semantic meaning of what the attribute, method, constant, etc. does. Do `myVeryImportantVariableKey` and not `impVarKey`.
+
+- **Variable Names**: Start with a lowercase, without underlines (nor dashes or spaces, of curse), and with an uppercase at first letter of each word. Do `myVariable` and not `myvariable`, `my_variable` or `MyVariable.
+
+- **MethodNames**: As Variable Names, start with a lowercase, without underlines and with a capital letter for each first word letter. Arguments might have a prefix as *with*, *from* or *at*. Use common sense to build a readable method name.
+
+- **Constants**: Constants start with capital letter and may have a prefix describing the procedence of the constant value and a suffix describing the semantic of the constant. For example, for a dictinary key to access a number value do `NSString * const MJDictionaryNumberKey = @"number";` and not `NSString * const number = @"number";`. Do not prefix constants with a `k` letter.
 
 ---
 ##2. Code Architecture
