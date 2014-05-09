@@ -108,6 +108,8 @@ Objective-C is a verbose language. Variables, methods, constants and any other n
 
 - **Constants**: Constants start with capital letter and may have a prefix describing the procedence of the constant value and a suffix describing the semantic of the constant. For example, for a dictinary key to access a number value do `NSString * const MJDictionaryNumberKey = @"number";` and not `NSString * const number = @"number";`. Do not prefix constants with a `k` letter.
 
+- **Enumerations**: Follow the same guidelines as constants.
+
 ---
 ##2. Code Architecture
 
