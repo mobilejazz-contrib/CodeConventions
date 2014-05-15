@@ -189,7 +189,7 @@ This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.
 
 ---
 ##5. Useful tools
-You can use this [XCode plugin](https://github.com/mobilejazz/CodeConventions/blob/master/ObjectiveC.md) to format your code using [Uncrustify](https://github.com/bengardner/uncrustify).
+You can use this [XCode plugin](https://github.com/benoitsan/BBUncrustifyPlugin-Xcode) to format your code using [Uncrustify](https://github.com/bengardner/uncrustify).
 
 You can use the following [uncrustify config file](https://github.com/mobilejazz/CodeConventions/tree/master/ObjectiveC) to format your files using the Mobilejazz code conventions.
 
